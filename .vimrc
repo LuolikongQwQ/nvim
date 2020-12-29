@@ -5,3 +5,6 @@ set fencs=utf8,gbk,gb2312,gb18030
 set nu
 colorscheme desert
 syntax on
+set relativenumber
+set cursorline
+
