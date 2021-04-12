@@ -16,10 +16,11 @@ set enc=utf8
 set fencs=utf8,gbk,gb2312,gb18030
 
 set nu
-colorscheme desert
+colorscheme delek
 syntax on
 set relativenumber
 set cursorline
+
 
 " my plug "
 call plug#begin('~/.config/nvim/plugged')
