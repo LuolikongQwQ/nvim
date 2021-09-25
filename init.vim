@@ -26,5 +26,7 @@ set cursorline
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'theniceboy/vim-deus'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
+
