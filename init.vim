@@ -33,7 +33,9 @@ call plug#end()
 " coc.nvim
 let g:coc_global_extensions = [
 	\'coc-json', 
-	\'coc-vimlsp']
+	\'coc-vimlsp',
+	\'coc-java',]
+
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
