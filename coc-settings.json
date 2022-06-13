@@ -1,0 +1,11 @@
+{
+	"languageserver": {
+		"java":{
+			"command": "java",
+			"rootPatterns": ["java"],
+			"trace.server": "verbose",
+			"filetypes": ["java"]
+
+		}
+	}
+}
