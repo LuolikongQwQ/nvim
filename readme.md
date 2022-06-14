@@ -7,4 +7,11 @@
 coc:
  ```shell
  yarn global add neovim
-```
+ ```
+
+language:
+   bash:
+   ```shell
+   yarn global add bash-language-server
+   ```
+

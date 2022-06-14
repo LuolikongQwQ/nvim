@@ -34,7 +34,8 @@ call plug#end()
 let g:coc_global_extensions = [
 	\'coc-json', 
 	\'coc-vimlsp',
-	\'coc-java',]
+	\'coc-java',
+	\'coc-sh']
 
 
 inoremap <silent><expr> <TAB>

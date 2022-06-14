@@ -1,11 +1,9 @@
 {
 	"languageserver": {
-		"java":{
-			"command": "java",
-			"rootPatterns": ["java"],
-			"trace.server": "verbose",
-			"filetypes": ["java"]
-
+  		"bash": {
+    			"command": "bash-language-server",
+    			"args": ["start"],
+    			"filetypes": ["sh"]
 		}
 	}
 }
