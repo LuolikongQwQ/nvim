@@ -35,7 +35,8 @@ let g:coc_global_extensions = [
 	\'coc-json', 
 	\'coc-vimlsp',
 	\'coc-java',
-	\'coc-sh']
+	\'coc-sh',
+	\'coc-yaml']
 
 
 inoremap <silent><expr> <TAB>
@@ -48,9 +49,11 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 			\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
