@@ -10,8 +10,8 @@ coc:
  ```
 
 language:
-   bash:
-   ```shell
-   yarn global add bash-language-server
-   ```
+bash:
+```shell
+yarn global add bash-language-server
+```
 
