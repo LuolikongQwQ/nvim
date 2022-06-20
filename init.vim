@@ -13,7 +13,6 @@ endif
 " config 
 set encoding=utf-8
 set nu
-colorscheme delek
 syntax on
 set relativenumber
 set cursorline
@@ -26,9 +25,33 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'theniceboy/vim-deus'
 Plug 'vim-airline/vim-airline'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh',
+"    \ }
+
+Plug 'junegunn/fzf'
+
 call plug#end()
+
+" LanguageClient config
+" Required for operations modifying multiple buffers like rename.
+
+" let g:LanguageClient_serverCommands = {
+"    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+"    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+"    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+"    \ 'python': ['/usr/local/bin/pyls'],
+"    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+"    \ }
+
+" nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+" nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+" nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
 
 " coc.nvim
 let g:coc_global_extensions = [
@@ -206,4 +229,16 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+" deus theme
+set t_Co=256
+set termguicolors
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set background=dark    " Setting dark mode
+colorscheme deus
+let g:deus_termcolors=256
 
