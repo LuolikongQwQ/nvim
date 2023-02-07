@@ -1,4 +1,4 @@
-[{
+{
 	"languageserver": {
   		"bash": {
     			"command": "bash-language-server",
@@ -6,10 +6,30 @@
     			"filetypes": ["sh"]
 		}
 	}
-}, {
+},
+{
 	"languageserver": {
-		"pyright": {
-			"enable": "true"
-		}
+		"pyright.enabled": true
 	}
-}]
+},
+{
+	"languageserver": {
+		"java.enabled": true,
+
+		"java.configuration.runtimes": [
+		       {
+    			"name": "JavaSE-11",
+    			"path": "/usr/lib/jvm/java-11-openjdk"
+		       },
+    		       {
+			"name": "JavaSE-19",
+    			"path": "/usr/lib/jvm/java-19-openjdk"
+		       },
+		       {
+    			"name": "JavaSE-8",
+    			"path": "/usr/lib/jvm/java-8-openjdk",
+    			"default": true
+		       }
+		]
+	}
+}
