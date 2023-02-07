@@ -60,7 +60,7 @@ let g:coc_global_extensions = [
 	\'coc-java',
 	\'coc-sh',
 	\'coc-yaml',
-	\'coc-jedi',]
+	\'coc-pyright',]
 
 " coc.nvim config
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
