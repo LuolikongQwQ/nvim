@@ -23,6 +23,11 @@ set shortmess+=c
 " my plug
 call plug#begin('~/.config/nvim/plugged')
 
+" file manager
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 Plug 'theniceboy/vim-deus'
 Plug 'vim-airline/vim-airline'
 
@@ -32,10 +37,29 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "    \ 'branch': 'next',
 "    \ 'do': 'bash install.sh',
 "    \ }
+Plug 'Yggdroot/indentLine'
 
 Plug 'junegunn/fzf'
 
 call plug#end()
+
+" plug config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+
+if !exists('g:airline_symbols')
+let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '▶'
+let g:airline_left_alt_sep = '❯'
+let g:airline_right_sep = '◀'
+let g:airline_right_alt_sep = '❮'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+
+set encoding=UTF-8
+let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 
 " LanguageClient config
 " Required for operations modifying multiple buffers like rename.
@@ -52,6 +76,8 @@ call plug#end()
 " nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 " nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
+" 快捷键
+map <C-r> :NERDTreeToggle<CR>
 
 " coc.nvim
 let g:coc_global_extensions = [
